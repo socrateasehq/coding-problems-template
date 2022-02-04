@@ -1,9 +1,28 @@
 import java.util.*;
 
+/** User Boilerplate */
+
+/*
+ * Do not remove or modify this section
+ */
+class Node {
+    int data;
+    Node next;
+
+    Node(int d) {
+        data = d;
+        next = null;
+    }
+}
+/*
+ * Do not remove or modify above section
+ */
+
 class Solution
 {
 	Node deleteNode(Node head, int x)
 	{
+        //write your code here
 		if (head == null)
             return null;
  
@@ -34,15 +53,7 @@ class Solution
 	}
 }
 
-class Node {
-    int data;
-    Node next;
-
-    Node(int d) {
-        data = d;
-        next = null;
-    }
-}
+/** Compiler Boilerplate */
 
 class DeleteNode {
     Node head;
