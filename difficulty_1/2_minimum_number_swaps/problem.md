@@ -1,6 +1,6 @@
-# Minimum Number Swaps
+# Ordering a List of Integers
 
-You are given an array of n distinct elements. Find the minimum number of swaps required to sort the array in strictly increasing order.
+`unique_ints` is an array of Integers. There are no repeating integers in `unique_ints`. A function `f(x,y)` acting on two elements in the list moves `x` to `y`'s position and `y` to `x`'s position. What is the least number of times you can call `f` so that the resulting array is in ascending order?
 
 ### Example 1
 
