@@ -1,6 +1,6 @@
-import java.util.*;
-
 /** User Boilerplate */
+
+import java.util.*;
 
 /*
  * Do not remove or modify this section
