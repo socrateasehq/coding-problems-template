@@ -25,9 +25,8 @@ The output for each test case will be the space separated value of the returned 
 
 **Explanation:**
 
-After deleting the node at 3rd position
-(1-base indexing), the linked list is as 1 3.
+After deleting the node at the 3rd position (1-base indexing), the linked list is 1 3.
 
 ### User Task
 
-The task is to complete the function **deleteNode**() which should delete the node at the required position.
+The task is to complete the function **deleteNode()** which should delete the node at the xth position and return the head of the modified linked list.
