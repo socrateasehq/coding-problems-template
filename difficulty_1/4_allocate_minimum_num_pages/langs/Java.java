@@ -1,59 +1,111 @@
-import java.util.ArrayList;
+/** User Boilerplate */
+
 import java.util.*;
-import java.io.BufferedReader;
 import java.io.*;
 
-/** User Boilerplate */
 class Solution
 {
-    public int minSwaps(int[] arr, int N)
+    static boolean isPossible(int arr[], int n, int m, int curr_min)
+    {
+        int studentsRequired = 1;
+        int curr_sum = 0;
+     
+        // iterate over all books
+        for (int i = 0; i < n; i++)
+        {
+            // check if current number of pages are greater
+            // than curr_min that means we will get the result
+            // after mid no. of pages
+            if (arr[i] > curr_min)
+                return false;
+     
+            // count how many students are required
+            // to distribute curr_min pages
+            if (curr_sum + arr[i] > curr_min)
+            {
+                // increment student count
+                studentsRequired++;
+     
+                // update curr_sum
+                curr_sum = arr[i];
+     
+                // if students required becomes greater
+                // than given no. of students,return false
+                if (studentsRequired > m)
+                    return false;
+            }
+     
+            // else update curr_sum
+            else
+                curr_sum += arr[i];
+        }
+        return true;
+    }
+     
+    static int findMinimumPages(int arr[], int n, int m)
     {
         //write your code here
-        int ans = 0;
-        int[] temp = Arrays.copyOfRange(arr, 0, N);
-        Arrays.sort(temp);
-        for (int i = 0; i < N; i++) 
+        long sum = 0;
+     
+        // return -1 if no. of books is less than
+        // no. of students
+        if (n < m)
+            return -1;
+     
+        // Count total number of pages
+        for (int i = 0; i < n; i++)
+            sum += arr[i];
+     
+        // initialize start as 0 pages and end as
+        // total pages
+        int start = 0, end = (int) sum;
+        int result = Integer.MAX_VALUE;
+     
+        // traverse until start <= end
+        while (start <= end)
         {
-            if (arr[i] != temp[i]) 
+            // check if it is possible to distribute
+            // books by using mid is current minimum
+            int mid = (start + end) / 2;
+            if (isPossible(arr, n, m, mid))
             {
-                ans++;
-                swap(arr, i, indexOf(arr, temp[i]));
+                // update result to current distribution
+                // as it's the best we have found till now.
+                result = mid;
+     
+                // as we are finding minimum and books
+                // are sorted so reduce end = mid -1
+                // that means
+                end = mid - 1;
             }
+     
+            else
+                // if not possible means pages should be
+                // increased so update start = mid + 1
+                start = mid + 1;
         }
-        return ans;
+     
+        // at-last return minimum no. of  pages
+        return result;
     }
-    public void swap(int[] arr, int i, int j)
-    {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    public int indexOf(int[] arr, int ele)
-    {
-        for (int i = 0; i < arr.length; i++) 
-        {
-            if (arr[i] == ele) {
-                return i;
-            }
-        }
-        return -1;
-    }
+    
 }
 
 /** Complier Boilerplate */
 
-class MinSwaps
+class MinimumPageDriver
 {
     public static void main(String[] args) throws IOException
     {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] S = br.readLine().trim().split(" ");
-        int[] nums = new int[S.length];
-        for (int i = 0; i < S.length; i++) {
-            nums[i] = Integer.parseInt(S[i]);
+        Scanner sc = new Scanner(System.in);
+        int numOfBooks = sc.nextInt();
+        int booksArr[] = new int[numOfBooks];
+        for (int i = 0; i < numOfBooks; i++) {
+            booksArr[i] = sc.nextInt();
         }
+        int numOfStudents = sc.nextInt();
         Solution sol = new Solution();
-        int ans = sol.minSwaps(nums, S.length);
+        int ans = sol.findMinimumPages(booksArr, numOfBooks, numOfStudents);
         System.out.println(ans);
     }
 }
