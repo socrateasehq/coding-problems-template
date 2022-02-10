@@ -1,8 +1,8 @@
-# Stop Infinite Loop In a Linked List
+# Problem 1
 
-You are given three classes `Class A, Class B & Class C`. Two classes can be linked by extending parent like `Class B extends Class A`, `Class C extends Class B`. If someone write `Class A extends Class C` and try to execute code then it will create a loop which a compiler should detect.
+## Problem Statement
 
-So, write a program to detect such loop if you are given a linked list containing N nodes having information about classes and connection between two nodes represents link between such classes which is creates using `extends` keyword.
+Given a linked list of `N` nodes. The task is to check if the linked list has a loop. Linked list can contain self loop.
 
 ### Input
 
