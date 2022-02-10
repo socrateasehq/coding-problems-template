@@ -2,17 +2,17 @@
 
 ## Problem Statement
 
-Given a linked list of `N` nodes. The task is to check if the linked list has a loop. Linked list can contain self loop.
+You are given a linked list of `N` nodes. The task is to check if the linked list has a loop.
 
 ### Input
 
-The first line of each test case contains number of elements in a linked list. Then in second line it shows space separated nodes of linked list and third line shows the index in the linked list to which last node is connected.
+The first line of each test case contains the number of elements in a linked list. The second line shows space-separated nodes of the linked list. The third line shows the index in the linked list to which the last node is connected.
 
-**Note**: Third line will be used only for test cases. It should be passed as an argument in the function.
+**Note**: Third line will be used only for test cases. It should not be passed as an argument in the function.
 
 ### Output
 
-The output for each test case will be Boolean value [1 or 0].
+The output for each test case should be a Boolean value [1 or 0].
 
 ### Example 1
 
@@ -28,7 +28,7 @@ The output for each test case will be Boolean value [1 or 0].
 1
 
 **Explanation:**
-Here, the last node 3 points to a node with index number 1 which creates a cycle.
+Here, the last node (3) points to a node with index number 1 which creates a loop.
 
 ### Example 2
 
@@ -43,7 +43,7 @@ Here, the last node 3 points to a node with index number 1 which creates a cycle
 **Output:**
 1
 
-**Explanation:** Here, the last node 2 points to a node with index number 0 which creates a cycle again.
+**Explanation:** Here, the last node (2) points to a node with index number 0 which creates a loop.
 
 ### Example 3
 
@@ -58,8 +58,8 @@ Here, the last node 3 points to a node with index number 1 which creates a cycle
 **Output:**
 0
 
-**Explanation:** Here, the last Node 5 points to a node with index number -1 which doesn't exist so it doesn't create a cycle.
+**Explanation:** Here, the last node (5) points to a node with index number -1 which doesn't exist. So, it doesn't create a loop.
 
 ### User Task
 
-The task is to complete the function **detectLoop**() which should return if linked list is forming any loop or not internally. Please note that you just have to pass the linked list containing N heads and function should return `1` or `0`.
+The task is to complete the function **detectLoop**(). The function should return whether the linked list is forming any loop. If it is forming a loop, return `1` else return `0`.
