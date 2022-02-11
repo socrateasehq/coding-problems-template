@@ -2,7 +2,7 @@
 
 ### Problem Statement
 
-There are `n` different books and `m` students. Each book is arranged in an ascending order of its number of pages. Every student must read some consecutive set of books (at least 1 book per student). Let each such distribution of books amongst the students be denoted by a permutation `i`.
+There are `n` books and `m` students. The books are arranged in an ascending order of its number of pages. Every student must read some consecutive set of books (at least 1 book per student). Let each such distribution of books amongst the students be denoted by a permutation `i`.
 
 For each such permutation `i`, let `p_i` denote the maximum number of pages that a student has to read. The task is to identify the particular permutation that results in the smallest `p_i`. (Read Example 1 below to understand this better.)
 

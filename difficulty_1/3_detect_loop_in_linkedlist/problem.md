@@ -1,5 +1,3 @@
-# Problem 1
-
 ## Problem Statement
 
 You are given a linked list of `N` nodes. The task is to check if the linked list has a loop.
@@ -62,4 +60,4 @@ Here, the last node (3) points to a node with index number 1 which creates a loo
 
 ### User Task
 
-The task is to complete the function **detectLoop**(). The function should return whether the linked list is forming any loop. If it is forming a loop, return `1` else return `0`.
+The task is to complete the function **detectLoop**(). The function should return whether the linked list is forming any loop. If it is forming a loop, return `true` else return `false`.

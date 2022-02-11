@@ -49,7 +49,7 @@ class Solution
 
 class DetectLoopDriver {
     public static void createLoop(Node head, Node tail, int x) {
-        if (x == 0) return;
+        if (x == -1) return;
 
         Node curr = head;
         for (int i=1; i<x; i++)
