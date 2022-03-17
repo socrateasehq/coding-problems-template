@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char first_character(char *string);
+char first_character(char *string) {
+  return(string[0]);
+}
 
 int main(int argc, char *argv[])
 {
@@ -17,8 +19,4 @@ int main(int argc, char *argv[])
   printf("%c", first_char);
   free(buffer);
   return 0;
-}
-
-char first_character(char *string) {
-  return(string[0]);
 }

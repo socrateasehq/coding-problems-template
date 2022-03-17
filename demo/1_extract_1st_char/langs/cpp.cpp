@@ -4,7 +4,9 @@
 
 using namespace std;
 
-char first_character(string s);
+char first_character(string s) {
+    return(s[0]);   
+}
 
 int main() {
 
@@ -15,8 +17,4 @@ int main() {
     cout << c;
 
     return 0;
-}
-
-char first_character(string s) {
-    return(s[0]);
 }
