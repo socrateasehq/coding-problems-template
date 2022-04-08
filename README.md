@@ -1,4 +1,4 @@
-### Installation
+## Installation
 
 ```bash
 python3 -m venv virtualenv
@@ -6,16 +6,14 @@ source virtualenv/bin/activate
 pip install git+ssh://git@github.com/socrateasehq/process-test-cases#egg=process_test_cases
 ```
 
-### Running
+## Running
 
-If you want to check the code for problem number 1 with difficulty level 2, you will run
+You can check the code for a problem within a given difficulty level or under the misc/ folder.
 
-```bash
-python run.py 1 2
-```
+## Testing
 
-If you want to check the code for demo problem number 1, you will run
+If you want to check the code for a problem that starts with **abc** within folder **level_1**, you will run
 
 ```bash
-python run.py demo 1
+python run.py level_1 abc
 ```
